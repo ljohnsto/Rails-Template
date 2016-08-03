@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'sqlite3'
+gem 'sprockets', '~>3.6.3'
+gem 'pry'
 
 group :development, :test do
   gem 'byebug', '9.0.5'

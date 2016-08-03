@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
+  get 'new' => 'users#new'
 
-  get 'users/create'
+  get 'create' => 'users#create'
 
-  get '/' => 'users/index'
+  get '/' => 'users#index'
 
 end
