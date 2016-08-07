@@ -21,7 +21,8 @@ doc = Nokogiri::HTML(open(url))
 
 links = doc.css("div[class=headlines]")
 want = links.css('li')
-puts want[0].text
-want.each do |line|
-  puts line.text
-end
+inner = want.css('a')
+puts inner[0]["href"]
+# want.each do |line|
+#   puts line.text
+# end
