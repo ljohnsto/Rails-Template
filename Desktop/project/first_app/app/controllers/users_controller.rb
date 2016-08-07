@@ -14,7 +14,8 @@ class UsersController < ApplicationController
     url = "http://espn.go.com/"
     doc = Nokogiri::HTML(open(url))
     links = doc.css("div[class=headlines]")
-    @want = links.css('li')
+    full_object = links.css('li')
+    @object = full_object.css('a')
     # puts want[0].text
     # want.each do |line|
     #   puts line.text

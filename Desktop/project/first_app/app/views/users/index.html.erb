@@ -1,4 +1,17 @@
 <h1>App Landing Page</h1>
- <% @want.each do |line| %>
-   <li> <%= line.text %> </li>
- <% end %>
+<% link_a = [] %>
+<% @object.each do |article| %>
+  <% link = "http//:www.espn.com" + article['href'].to_s %>
+  <% link_a.push(link) %>
+<% end %>
+
+<% @object.each do |line| %>
+  <li><%= line.text %>
+  <% link_a.each do |link| %>
+    <a href= link>, [Click here for Article]</a>
+  <% end %>
+  </li>
+<% end %>
+
+
+ <a href="google.com"> click here</a>
