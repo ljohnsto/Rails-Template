@@ -7,11 +7,9 @@
 
 <% @object.each do |line| %>
   <li><%= line.text %>
-  <% link_a.each do |link| %>
-    <a href= link>, [Click here for Article]</a>
-  <% end %>
+    <% link = "www.espn.com" + line['href'].to_s %>
+    <%= link_to link do %>
+      <%= "[Click here for Article]" %>
+    <% end %>
   </li>
 <% end %>
-
-
- <a href="google.com"> click here</a>
